@@ -1,0 +1,67 @@
+.grad{
+  position: relative;
+  width: auto;
+  margin-top: 100px;
+  height: 634px;
+  background-color: #CBB7AD;
+          background-image: linear-gradient(bottom,#CBB7AD,white);
+          background-image: -o-linear-gradient(bottom,#CBB7AD,white);
+          background-image: -moz-linear-gradient(bottom,#CBB7AD,white);
+          background-image: -webkit-linear-gradient(bottom,#CBB7AD,white);
+}
+
+.grad_img{
+  position: absolute;
+  margin-left: 132px;
+}
+
+.download{
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  left: 900px;
+  width: 535px;
+  height: 388px;
+
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 104px;
+
+  color: #000000;
+}
+
+.download_h1{
+  margin: 0px;
+}
+
+.download_h3{
+  margin-right: 52px;
+  margin-bottom: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.download_button{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 367px;
+  height: 64px;
+  background: #EE2A2A;
+  border-radius: 10px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 28px;
+
+  color: #000000;
+}

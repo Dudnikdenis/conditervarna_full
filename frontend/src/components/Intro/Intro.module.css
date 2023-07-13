@@ -1,0 +1,43 @@
+.intro{
+    height: 100vh;
+    background:url(./../../img/cake.png) no-repeat center;
+    background-size: cover;
+    margin-bottom: 156px;
+  }
+  
+  .intro_title{
+    position: absolute;
+    width: 461px;
+    height: 600px;
+    left: 115px;
+    top: 388px;
+  
+    font-family: 'Pacifico';
+    font-style: normal;
+    
+    font-size: 40px;
+    line-height: 160px;
+  
+    color: #000000;
+  
+  }
+  
+  .intro_h1{
+    position: absolute;
+    top: 0px;
+  }
+  
+  .button{
+    position: absolute;
+    background-color: #CBB7AD;
+    width: 232px;
+    height: 64px;
+    left: 200px;
+    top: 450px;
+    border-radius: 10px;
+  
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 20;
+    font-size: 20px;
+  }

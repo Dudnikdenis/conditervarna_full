@@ -1,0 +1,25 @@
+.assortiment{
+  margin-top: 100px;
+}
+.wraper_fuul{
+  
+  max-width: 983px;
+  margin: 0 auto;
+}
+
+.assortiment_caption{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 46px;
+}
+
+.assortiment_title{
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-size: 59px;
+  line-height: 104px;
+  margin: 0px;
+}
+

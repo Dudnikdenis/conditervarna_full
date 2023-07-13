@@ -1,0 +1,25 @@
+.assortiment_bloc{
+  width: 291px;
+  height: 445px;
+  background: #CBB7AD;
+  border-radius: 12px;
+}
+
+.assortiment_title{
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-size: 59px;
+  line-height: 104px;
+  margin: 0px;
+}
+
+.assortiment_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+}
+
+.bloc_img{
+  width: 290px;
+  height: 200px;
+}

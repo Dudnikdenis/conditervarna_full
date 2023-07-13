@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta name="yandex-verification" content="e73fc4e93119a9dd" />
+        <title>Сайт</title>
+		<link rel="stylesheet" type ="text/css" href="styles.css"/>
+    </head>
+    <body >
+	<header class="header">
+		<div class="wraper">
+			<nav class="wraper_haader">
+				<a class="header_logo" href="https://msiter.ru/references/css-reference" target="_blank";>conditer.hopto.org</a>
+				<ul class="header_list">
+					<li class="header_item">
+						<a class="header_center" href="#">Ассортимент</a>
+					</li>
+					<li class="header_item">
+						<a class="header_center" href="#">Отзывы</a>
+					</li>	
+				</ul>
+				<p class="tel">
+					+7(952) 504-25-42
+				</p>
+			</nav>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="intro">
+			<div class="intro_title">
+				<h1 class="intro_h1">Торты от Валентины</h1>
+				<button class="button">Заказать</button>
+			</div>
+		</section>	
+		<section class="assortiment">
+			<div class="wraper_fuul">
+				<div class="assortiment_caption">
+					<h2 class="assortiment_title">
+						Ассортимент
+					</h2>
+				</div>				
+				<div class="assortiment_blocs">
+					<div class="assortiment_bloc">
+						<img src="../dashboard/img/4ae46ab86c387180334042fc7015bb0e 1.jpg" alt="">
+						<h1 class="bloc_title">Вкусный тортик</h1>
+						<h3 class="bloc_description">Шоколадная радость для всех домашних</h3>
+						<h2 class="bloc_count">3500 рублей</h2>
+						<button class="bloc_button">Подробнее</button>
+					</div>
+					<div class="assortiment_bloc">
+						<img src="../dashboard/img/4ae46ab86c387180334042fc7015bb0e 1.jpg" alt="">
+						<h1 class="bloc_title">Вкусный тортик</h1>
+						<h3 class="bloc_description">Шоколадная радость для всех домашних</h3>
+						<h2 class="bloc_count">3500 рублей</h2>
+						<button class="bloc_button">Подробнее</button>
+					</div>
+					<div class="assortiment_bloc">
+						<img src="../dashboard/img/4ae46ab86c387180334042fc7015bb0e 1.jpg" alt="">
+						<h1 class="bloc_title">Вкусный тортик</h1>
+						<h3 class="bloc_description">Шоколадная радость для всех домашних</h3>
+						<h2 class="bloc_count">3500 рублей</h2>
+						<button class="bloc_button">Подробнее</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>	
+    </body>
+</html>

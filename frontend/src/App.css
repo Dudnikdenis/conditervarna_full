@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face{
+     
+  font-family: 'Pacifico';
+  src:url('fonts/Pacifico-Regular.ttf');
+font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+
+body{
+  background-color: aliceblue;
+}
+#fon{
+  position: relative;
+}
+.title{
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Pacifico;
+font-size: 91px;
+text-decoration: none;
+color: black;
+}
+
+.transf_cake{
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
+
+/* @media (max-device-width:480px){
+  .intro{
+      
+      height: 100vh;
+      background: url(../dashboard/img/cake_mobile.jpg) no-repeat center;
+      background-size: cover;
+  }
+} */
+
+
+/* @media (max-device-width:480px){
+  стили для телефона
+  aspect-ratio: отношение ширины к высоте области отображения (браузера)
+  device-aspect-ratio: отношение ширины к высоте экрана устройства
+  max-width/min-width и max-height/min-height: максимальная и минимальная ширина и высота области отображения (браузера)
+  max-device-width/min-device-width и max-device-height/min-device-height: максимальная и минимальная ширина и высота экрана мобильного устройства
+  orientation: ориентация (портретная или альбомная)
+} */
