@@ -3,7 +3,7 @@ import Assortiment from "./Assortiment";
 import { setAssortiment, changingIsFetching, getAssortiment } from "../../Redux/assortBlock-reducer"
 
 let mapStateToProps = (state) =>{
-
+debugger;
   return {
     
     assortBlock: state.assortBlock,

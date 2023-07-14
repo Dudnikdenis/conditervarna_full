@@ -22,10 +22,40 @@ const articles = {
         Count: " От 2800 рублей"}  ]
 };
 
+const barber = {
+    master: {
+            "userName":"userName",
+            "date":"date","userRecords":[
+            {
+                "lineId":1,
+                "userId":1,
+                "userCompany":"userCompany",
+                "date":"date",
+                "time":"time",
+                "clientName":"clientName",
+                "procedureName":"procedureName",
+                "comment":"comment"},
+            {
+               "lineId":2,
+                "userId":1,
+                "userCompany":"userCompany",
+                "date":"date",
+                "time":"time",
+                "clientName":"clientName",
+                "procedureName":"procedureName",
+                "comment":"comment"}
+        ]
+        }
+};
+
 app.use(cors());
 
 app.get('/assortiment',(req,res,next)=>{
     res.send(articles);
+});
+
+app.get('/records/1',(req,res,next)=>{
+    res.send(barber);
 });
 
 app.listen(PORT, ()=>{

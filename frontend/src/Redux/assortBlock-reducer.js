@@ -30,6 +30,7 @@ export const getAssortiment = () => {   // Thunk
     return (dispatch) => {
     dispatch (changingIsFetching(true));
       assortimentAPI.GetAssortiment().then(response => {
+        
         dispatch (changingIsFetching(false));
         dispatch (setAssortiment(response.assortBlock))
       });
