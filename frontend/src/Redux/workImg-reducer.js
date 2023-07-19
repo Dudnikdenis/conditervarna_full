@@ -1,23 +1,48 @@
-import workTort1 from './../img/торт_1.jpg';
-import workTort2 from './../img/торт_2.jpg';
-import workTort3 from './../img/торт_3.jpg';
-import workTort4 from './../img/торт_4.jpg';
-import workTort5 from './../img/торт_5.jpg';
-import workTort6 from './../img/торт_6.jpg';
+// 
+import { imgWorkAPI } from "../API/api";
 
-let initialSatate = {    
-    workImg: [{ Img: workTort1 },
-    { Img: workTort2 },
-    { Img: workTort3 },
-    { Img: workTort4 },
-    { Img: workTort5 },
-    { Img: workTort6 }
-    ]
+const SET_IMG_WORK = "SET_IMG_WORK"
+const CHANGING_ISFETCHING = "CHANGING_ISFETCHING";
+const CHANGING_ISDIDMOUNT = "CHANGING_ISDIDMOUNT";
+
+let initialSatate = { 
+    workImg: [],
+    isFetching: true,
+    isDidMount: true
 };
 
 const workImgReducer = (state = initialSatate, action) => {
+   debugger;
     
-    return state;    
+    switch (action.type){
+        case SET_IMG_WORK: 
+            return{
+                ...state,
+                workImg: [...state.workImg, ...action.imgWork]
+            };
+        case CHANGING_ISFETCHING: 
+            return{ 
+                ...state, 
+                 isFetching: action.isFetching }; 
+        case CHANGING_ISDIDMOUNT: 
+            return{ 
+                ...state, 
+                isDidMount: action.isDidMount }; 
+        default:
+    return state; 
+    }   
 }
+export const setImgWork=(imgWork)=> ({type: SET_IMG_WORK, imgWork});
+export const changingIsFetching=(isFetching)=> ({type: CHANGING_ISFETCHING, isFetching});
+export const changingisDidMount=(isDidMount)=> ({type: CHANGING_ISDIDMOUNT, isDidMount});
+
+export const getImg = () => async (dispatch) => {
+    dispatch (changingIsFetching(true)); //loader
+      let response = await imgWorkAPI.GetImgWork();
+     dispatch (changingIsFetching(false)); //loader
+    // debugger;
+    // console.log(response);
+      dispatch (setImgWork(response.workImg));
+    };
 
 export default workImgReducer;

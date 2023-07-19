@@ -1,5 +1,6 @@
 import Grad from "./Grad";
 import { connect } from "react-redux";
+import { savePhoto } from "../../Redux/grad-reducer";
 
 let mapStateToProps = (state) => {
   return {
@@ -7,12 +8,7 @@ let mapStateToProps = (state) => {
   };
 };
 
-let mapDispatchToProps = (dispatch) => {
-  return {
-  };
-};
-
-const GradContainer = connect(mapStateToProps,mapDispatchToProps)(Grad);
+const GradContainer = connect(mapStateToProps,{savePhoto})(Grad);
 
 export default GradContainer;
 

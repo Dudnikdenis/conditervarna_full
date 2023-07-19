@@ -1,13 +1,16 @@
 import { assortimentAPI } from "../API/api";
 
+
+
+
 const SET_ASSORTIMENT = "SET_ASSORTIMENT";
 const CHANGING_ISFETCHING = "CHANGING_ISFETCHING";
 
-let initialState = {
+let initialSatate = {
     assortBlock: [],
     isFetching: true
 };
- const assortBlockReducer = (state = initialState, action) => {
+ const assortBlockReducer = (state = initialSatate, action) => {
 
     switch (action.type){
         case SET_ASSORTIMENT: 
@@ -15,7 +18,7 @@ let initialState = {
                 ...state,
                 assortBlock: [...state.assortBlock, ...action.assortBlock]
             };
-        case CHANGING_ISFETCHING:             
+        case CHANGING_ISFETCHING: 
             return{ 
                 ...state, 
                  isFetching: action.isFetching }; 
@@ -26,15 +29,12 @@ let initialState = {
 export const setAssortiment=(assortBlock)=> ({type: SET_ASSORTIMENT, assortBlock});
 export const changingIsFetching=(isFetching)=> ({type: CHANGING_ISFETCHING, isFetching});
 
-export const getAssortiment = () => {   // Thunk
-    return (dispatch) => {
+export const getAssortiment = () => async (dispatch) => {
     dispatch (changingIsFetching(true));
-      assortimentAPI.GetAssortiment().then(response => {
-        
-        dispatch (changingIsFetching(false));
-        dispatch (setAssortiment(response.assortBlock))
-      });
+      let response = await assortimentAPI.GetAssortiment();
+      dispatch (changingIsFetching(false));
+      dispatch (setAssortiment(response.assortBlock));
+      
     };
-}
 
 export default assortBlockReducer;

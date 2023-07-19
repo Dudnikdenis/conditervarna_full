@@ -2,8 +2,7 @@ import React from "react";
 import cs from "./Works.module.css"
 
 function Works(props) { 
-
-  let worksElement = props.workImg.workImg.map(w => <img src={w.Img} alt="" />)
+  let worksElement = props.workImg.workImg.map(w => <img src={w.url} alt="" />)
   return (
     <section className={cs.section}>
       

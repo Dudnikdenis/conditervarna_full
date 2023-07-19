@@ -1,32 +1,18 @@
 import { connect } from "react-redux";
-import Works from './Works'
+import WorkC from './WorkC'
+import {changingisDidMount, changingIsFetching, getImg } from "../../Redux/workImg-reducer";
 
 let mapStateToProps = (state) => {
   return {
-    workImg: state.workImg
+    workImg: state.workImg,
+    isFetching: state.workImg.isFetching,
+    isDidMount: state.workImg.isDidMount
   };
 };
 
-let mapDispatchToProps = (dispatch) => {
-  return {};
-};
-const WorksContainer = connect(mapStateToProps, mapDispatchToProps)(Works);
+
+const WorksContainer = connect(mapStateToProps, {changingisDidMount,changingIsFetching, getImg})(WorkC);
 
 export default WorksContainer;
 
 
-// function WorksContainer(props) { 
-//   return (
-//     <StoreContext.Consumer>
-//       {      
-//       (store)=>{
-       
-//         let workImg = store.getState().workImg;
-//         return(
-//           <Works workImg = {workImg}/>
-//         )
-//       }
-//       }      
-//     </StoreContext.Consumer>    
-//   )  
-// };

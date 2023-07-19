@@ -12,14 +12,6 @@ class Assortiment extends React.Component {
 
     if(this.props.assortBlock.assortBlock.length===0){
       this.props.getAssortiment();
-      // this.props.changingIsFetching(true);
-      // // запрос на сервер
-      // assortimentAPI.GetAssortiment().then(response => {
-      //     this.props.changingIsFetching(false);
-          
-      //     this.props.setAssortiment(response.assortBlock)
-      //     debugger;
-      // });
     }
 
   }
