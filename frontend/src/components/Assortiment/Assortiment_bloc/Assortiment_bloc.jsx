@@ -2,7 +2,7 @@ import React from "react";
 import cs from "./Assortiment_bloc.module.css";
 
 function Assortiment_bloc(props) {
-    console.log(props);
+    // console.log(props);
 
 
     return (

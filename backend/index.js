@@ -18,17 +18,17 @@ const articles = {
             Description: "Яркие красные коржи и белоснежный крем.",
             Count: "От 3000 рублей"
         },
-        { //Img: tort1, 
+        { Img: 'https://ikonditer.ru/files/Nachinki/Red_Velvet.jpg', 
             Title: "Молочная девочка",
             Description: "Шоколадная радость для всех домашних",
             Count: "От 2500 рублей"
         },
-        { //Img: tort2, 
+        { Img: 'https://ikonditer.ru/files/Nachinki/Red_Velvet.jpg', 
             Title: "Сникерс",
             Description: "Шоколадная радость для всех домашних",
             Count: "От 2600 рублей"
         },
-        { //Img: tort3, 
+        { Img: 'https://ikonditer.ru/files/Nachinki/Red_Velvet.jpg', 
             Title: "Киндер молочный ломтик",
             Description: "Шоколадная радость для всех домашних",
             Count: " От 2800 рублей"
@@ -45,14 +45,15 @@ app.use(formData.stream());
 // union the body and the files
 app.use(formData.union());
 
-app.use('/images/decor', express.static(path.join(__dirname, '\\img', '\\imgForDecoration')));
-app.use('/images/forWork', express.static(path.join(__dirname, '\\img', '\\imgForWork')));
-app.use('/images/work', express.static(path.join(__dirname, '\\img', '\\imgWork')))
+//делаем статичные директории
+app.use('/images/decor', express.static(__dirname + '/img/imgForDecoration'));  
+app.use('/images/forWork', express.static( __dirname + '/img/imgForWork'));
+app.use('/images/work', express.static(__dirname + '/img/imgWork'));
+
 
 app.use(cors());
 app.use(express.json());
 app.use('/api', userRouter);
-
 app.use('/grad', gradRouter);
 app.use('/work', workRouter);
 
@@ -70,6 +71,9 @@ app.use('/work', workRouter);
 app.get('/assortiment', (req, res, next) => {
     res.send(articles);
 });
+// app.get('/work', (req, res, next) => {
+//     res.send(articles);
+// });
 
 app.listen(PORT, () => {
     console.log('Server start 3001!');

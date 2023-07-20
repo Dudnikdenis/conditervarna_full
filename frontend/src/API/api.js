@@ -3,23 +3,21 @@ import axios from "axios";
 const instance = axios.create({
     baseURL: 'http://localhost:3001/'
 })
-export const assortimentAPI = {
+export const conditerAPI = {
     async GetAssortiment() //changingIsFetching, setAssortiment - я незнаю зачем эти параметры
     {
-        let response = await instance.get("assortiment") ;        
+        let response = await instance.get("assortiment") ;
         return response.data;
         
+    },
+
+    async GetImgWork() //changingIsFetching, setAssortiment - я незнаю зачем эти параметры
+    {
+        let response = await instance.get("work/work") ; 
+        return response.data;
     }
 }
 
-export const imgWorkAPI = {
-    async GetImgWork() //changingIsFetching, setAssortiment - я незнаю зачем эти параметры
-    {
-        let response = await instance.get("work/img") ;        
-        return response.data;
-        
-    }
-}
 
 export const gradAPI = {
     async PutPhoto(photo) //changingIsFetching, setAssortiment - я незнаю зачем эти параметры

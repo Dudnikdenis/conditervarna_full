@@ -1,32 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Works from "./Works";
 import loader from '../../img/Funnel.gif';
+import cs from "./Works.module.css"
 
-
-
-class WorkC extends React.Component {
-
-  
-  componentDidMount(){
-    debugger;
-    if(this.props.workImg.isDidMount){ 
-      debugger;
-      console.log(this.props.workImg.isDidMount)
-      this.props.getImg();
-      this.props.changingisDidMount(false);
+const WorkC = (props) => {
+  useEffect( () => {
+    if(props.workImg.workImg.length===0){ 
+      props.getImg();
     }
-    console.log(this.props.workImg)
-    
-  }
+  },[]);
 
-  render () {
-    
-    return(
-    <div>{this.props.isFetching ? <img src = {loader}/> : null}
-        <Works workImg = {this.props.workImg}/>
-    </div>
-    
-  )}
+  return (
+    <section className={cs.section}>
+      
+      <div className={cs.wraper_fuul}>
+        <h1 className={cs.works_h1}>Посмотрите примеры наших работ</h1>
+      </div>
+      <div>{props.workImg.workImg.length=== 0? <img src = {loader}/> : <Works workImg = {props.workImg}/>}
+        
+      </div>
+    </section>
+  )
 }
 
 export default WorkC;

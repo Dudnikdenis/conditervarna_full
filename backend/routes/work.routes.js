@@ -4,7 +4,7 @@ const gradController = require('../controller/grad.controller');
 const workController = require('../controller/work.controller');
 
 router.post('/work', gradController.AddImg);
-router.get('/img', workController.GetWork);
+router.get('/work', workController.GetWork);
 router.delete('/work', gradController.DeleteUser);
 
 

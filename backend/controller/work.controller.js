@@ -1,3 +1,4 @@
+// сдесь идет работа с запросами к БД
 const path = require('path')
 const fs = require('fs') //для работы с файлами
 const mv = require('mv')
@@ -27,11 +28,9 @@ class workController {
     }
 
     async GetWork(req,res){
-        const imgWorkDB = await db.query('SELECT * FROM public.imgwork')
-        const result = {
-            workImg: imgWorkDB.rows
-        }
-        res.send(result)
+        const imgWorkDB = await db.query('SELECT * FROM public.imgwork;')
+        console.log(imgWorkDB)
+        res.json(imgWorkDB.rows) //imgWorkDB.rows
     };
 }
 

@@ -10,6 +10,6 @@ create table imgWork (
 );
 
 insert into public.imgWork(url) 
-values ('http://localhost:3001/images/work/6.jpg');
+values ('http://localhost:3002/images/work/6.jpg');
 
 select * from public.imgwork;
