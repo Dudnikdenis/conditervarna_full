@@ -7,6 +7,7 @@ const db = require('../db')
 
 class workController {
     async AddImg(req,res){
+        // console.log(req); //нужно проверить какие данные приходят
         
         // const fileName = await db.query('SELECT COUNT(*) FROM public.users'); 
         // const urlFile = `http://localhost:3001/images/forWork/${Number(fileName.rows[0].count) + 1}.jpg`;
@@ -29,7 +30,6 @@ class workController {
 
     async GetWork(req,res){
         const imgWorkDB = await db.query('SELECT * FROM public.imgwork;')
-        console.log(imgWorkDB)
         res.json(imgWorkDB.rows) //imgWorkDB.rows
     };
 }

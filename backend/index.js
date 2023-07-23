@@ -1,4 +1,5 @@
 const express = require('express');
+const fileupload = require("express-fileupload");
 const path = require('path')
 const formData = require("express-form-data");
 const userRouter = require('./routes/user.routes');
@@ -45,6 +46,7 @@ app.use(formData.stream());
 // union the body and the files
 app.use(formData.union());
 
+app.use(fileupload({}));
 //делаем статичные директории
 app.use('/images/decor', express.static(__dirname + '/img/imgForDecoration'));  
 app.use('/images/forWork', express.static( __dirname + '/img/imgForWork'));

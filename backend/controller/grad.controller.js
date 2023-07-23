@@ -7,9 +7,9 @@ const db = require('../db')
 class gradController {
     async AddImg(req,res){
         
-        const fileName = await db.query('SELECT COUNT(*) FROM public.users'); 
+        const fileName = await db.query('SELECT COUNT(*) FROM public.forwork'); 
         const urlFile = `http://localhost:3001/images/forWork/${Number(fileName.rows[0].count) + 1}.jpg`;
-        const newPath = `${(path.resolve(__dirname, '..'))}\\img\\imgForWork\\${Number(fileName.rows[0].count) + 1}.jpg`;
+        const newPath = `${(path.resolve(__dirname, '..'))}/img/imgForWork/${Number(fileName.rows[0].count) + 1}.jpg`;
         fs.copyFile(req.files.file.path, newPath, function(err, result){  //rename
             if(err){
                res.writeHead(500, { 'content-type': 'text/plain' });
@@ -23,7 +23,7 @@ class gradController {
             }
         } 
         ) 
-        await db.query(`INSERT INTO public.users(name) values ('${urlFile}');`); 
+        await db.query(`INSERT INTO public.forwork(name) values ('${urlFile}');`); 
     }
 
     async GetUser(req,res){

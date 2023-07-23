@@ -3,6 +3,11 @@ CREATE TABLE users(
     name VARCHAR(15)
     );
 
+CREATE TABLE forwork(
+    img_id serial PRIMARY KEY, 
+    name VARCHAR(15)
+    );    
+
 create table imgWork (
 	img_id serial not null,
 	url character varying(100),

@@ -14,6 +14,7 @@ let initialSatate = {
 const workImgReducer = (state = initialSatate, action) => {
     switch (action.type){
         case SET_IMG_WORK: 
+        debugger;
             return{
                 ...state,
                 workImg: [...state.workImg, ...action.imgWork]
