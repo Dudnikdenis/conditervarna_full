@@ -11,11 +11,14 @@ let initialState = {
 
     switch (action.type){
         case SET_ASSORTIMENT: 
-        // debugger;
-            return{
-                ...state,
-                assortBlock: [...state.assortBlock, ...action.assortBlock]
-            };
+            if(state.assortBlock.length===0 || state.assortBlock.toString() !== action.assortBlock.toString())
+            {
+                return{
+                    ...state,
+                    assortBlock: [...state.assortBlock, ...action.assortBlock]
+                };
+            }
+            else return{...state};            
         case CHANGING_ISFETCHING:             
             return{ 
                 ...state, 

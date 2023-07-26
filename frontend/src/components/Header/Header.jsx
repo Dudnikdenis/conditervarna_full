@@ -18,6 +18,9 @@ function Header() {
                 </li>	
                 <li className={cs.header_item}>
                     <Link  to="/works" className={cs.header_center}>Наши работы</Link>
+                </li>
+                <li className={cs.header_item}>
+                    <Link  to="/login" className={cs.header_center}>Войти</Link>
                 </li>	
               </ul>
             <p className={cs.tel}>
